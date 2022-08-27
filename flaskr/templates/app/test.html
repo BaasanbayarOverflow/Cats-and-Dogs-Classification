@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    {% if result == 1: %}
+        <h3> Dog </h3>
+    {% elif result == 0: %}
+        <h3> Cat </h3>
+    {% else %}
+        <h3> Something is wrong. Result is {{ result }} </h3>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="container">
+        <form action="http://localhost:9000/" method="post" enctype="multipart/form-data">
+            <div class="wrap">
+                <h1>CATS AND DOGS</h1>
+                <span class="upload button">
+                    <input type="file" id="file" name="file" oninput="setFileNameForInputLabel()">
+                    <span id="file_label">Click me to upload</span>
+                </span>
+            </div>
+            <div>
+                <label for="model">Please choose the model:</label>
+                <select name="model">
+                    <option value="CNN">CNN</option>
+                    <option value="CNN_im">CNN v1.0</option>
+                    <option value="Xception">Xception</option>
+                </select>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+{% endblock %}
